@@ -6,7 +6,8 @@
 \ProcessOptions\relax
 \LoadClass{book}
 
-\makeatletter
+
+%\makeatletter
 
 \setlength{\unitlength}{1mm}
 
@@ -17,113 +18,123 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, es-tabla]{babel}
-\usepackage[
-    backend=biber, 
-    %style=ieee,
-    %style=alphabetic,
-    style=ieee-alphabetic,
-    sorting=nty]{biblatex}
-\usepackage{makecell}
-\usepackage{times}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{enumerate}
-\usepackage{enumitem}
-\usepackage{bookmark}
-\usepackage{float}
-\usepackage{datetime2}
-\usepackage{graphicx}
-\usepackage{multirow}
-\usepackage{subfigure}
-\usepackage{appendix}
-\usepackage{listings}
-\usepackage{longtable}
-\usepackage{tabularx}
-\usepackage{colortbl}
-\usepackage{minted}
-\usepackage[export]{adjustbox}
-\usepackage{emptypage}
-\usepackage{setspace}
-\usepackage{textcomp}
-\usepackage{caption}
-\usepackage{footmisc}
-\usepackage{csquotes}
-\usepackage{rotating}
-\usepackage{wrapfig}
-\usepackage{xstring}
-\usepackage{pdfpages}
-\usepackage{amsmath}
+
+
+%\usepackage[
+%    backend=biber, 
+%    %style=ieee,
+%    %style=alphabetic,
+%    style=ieee-alphabetic,
+%    sorting=nty]{biblatex}
+%\usepackage{makecell}
+%\usepackage{times}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage{enumerate}
+%\usepackage{enumitem}
+%\usepackage{bookmark}
+%\usepackage{float}
+%\usepackage{datetime2}
+%\usepackage{graphicx}
+%\usepackage{multirow}
+%\usepackage{subfigure}
+%\usepackage{appendix}
+%\usepackage{listings}
+%\usepackage{longtable}
+%\usepackage{tabularx}
+%\usepackage{colortbl}
+%\usepackage{minted}
+%\usepackage[export]{adjustbox}
+%\usepackage{emptypage}
+%\usepackage{setspace}
+%\usepackage{textcomp}
+%\usepackage{caption}
+%\usepackage{footmisc}
+%\usepackage{csquotes}
+%\usepackage{rotating}
+%\usepackage{wrapfig}
+%\usepackage{xstring}
+%\usepackage{pdfpages}
+%\usepackage{amsmath}
 \usepackage{hyperref}
-\usepackage{cleveref}
-\usepackage{ifthen}
-\usepackage{currfile}
+\usepackage[nomain,acronym]{glossaries}
 
-\usepackage[
-  paperwidth=210mm,
-  paperheight=297mm,
-  left=35mm,right=30mm,
-  top=25mm, bottom=25mm,
-  marginparwidth=1cm, marginparsep=1cm]{geometry}
+\makeglossaries
 
-\captionsetup{
-  margin=0pt,
-  font={footnotesize,stretch=.85},
-  labelfont=bf}
+\newcommand{\ac}[1]{\acrfull{#1}}
+\newcommand{\acs}[1]{\acrshort{#1}}
+\newcommand{\acl}[1]{\acrlong{#1}}
+\newcommand{\acro}[2]{\newacronym{#1}{#1}{#2}}
+%\usepackage{cleveref}
+%\usepackage{ifthen}
+%\usepackage{currfile}
 
-\setlength{\parskip}{4pt}
+%\usepackage[
+%  paperwidth=210mm,
+%  paperheight=297mm,
+%  left=35mm,right=30mm,
+%  top=25mm, bottom=25mm,
+%  marginparwidth=1cm, marginparsep=1cm]{geometry}
+%
+%\captionsetup{
+%  margin=0pt,
+%  font={footnotesize,stretch=.85},
+%  labelfont=bf}
+%
+%\setlength{\parskip}{4pt}
+%
+%\makeatletter
+%\providecommand*{\input@path}{}
+%\g@addto@macro\input@path{{tex/}{sty/}}
+%\makeatother
+%\graphicspath{{fig/}}
+%
+%\pagestyle{headings}
+%\renewcommand{\bibname}{Referencias}
+%\renewcommand{\appendixname}{Anexo}
+%\renewcommand{\appendixtocname}{Anexo}
+%\renewcommand{\appendixpagename}{Anexo}
+%
+%\definecolor{gris30}{gray}{0.30}
+%\definecolor{gris85}{gray}{0.85}
+%\definecolor{gris20}{gray}{0.20}
+%\definecolor{gris50}{gray}{0.50}
+%\newcommand\myshade{85}
+%\colorlet{mylinkcolor}{violet}
+%\colorlet{mycitecolor}{YellowOrange}
+%\colorlet{myurlcolor}{Aquamarine}
+%
+%\hypersetup{
+%  linkcolor  = mylinkcolor!\myshade!black,
+%  citecolor  = mycitecolor!\myshade!black,
+%  urlcolor   = myurlcolor!\myshade!black,
+%  colorlinks = true,
+%}
 
-\makeatletter
-\providecommand*{\input@path}{}
-\g@addto@macro\input@path{{tex/}{sty/}}
-\makeatother
-\graphicspath{{fig/}}
-
-\pagestyle{headings}
-\renewcommand{\bibname}{Referencias}
-\renewcommand{\appendixname}{Anexo}
-\renewcommand{\appendixtocname}{Anexo}
-\renewcommand{\appendixpagename}{Anexo}
-
-\definecolor{gris30}{gray}{0.30}
-\definecolor{gris85}{gray}{0.85}
-\definecolor{gris20}{gray}{0.20}
-\definecolor{gris50}{gray}{0.50}
-\newcommand\myshade{85}
-\colorlet{mylinkcolor}{violet}
-\colorlet{mycitecolor}{YellowOrange}
-\colorlet{myurlcolor}{Aquamarine}
-
-\hypersetup{
-  linkcolor  = mylinkcolor!\myshade!black,
-  citecolor  = mycitecolor!\myshade!black,
-  urlcolor   = myurlcolor!\myshade!black,
-  colorlinks = true,
-}
-
-\usepackage{metadata}
-\usepackage{licencia}
-\usepackage{code}
-\usepackage{portada}
-\usepackage{entornos}
-\usepackage{indices}
-\usepackage{admonition}
-\usepackage{acronimos}
-
-\setlist[description]{style=nextline,labelwidth=0pt,leftmargin=30pt,itemindent=\dimexpr-20pt-\labelsep\relax} % Global Setup Description List
-
-\DeclareRobustCommand{\deschyperlink}[2]{%
-  \hyperlink{#1}{#2}%
-}
-
-
-\makeatletter % Redefinition of Description List Items source: http://tex.stackexchange.com/a/1248/13552
-\let\orgdescriptionlabel\descriptionlabel
-\renewcommand*{\descriptionlabel}[1]{%
-  \let\orglabel\label
-  \let\label\@gobble
-  \phantomsection
-  \protected@edef\@currentlabel{#1}%
-  %\edef\@currentlabelname{#1}%
-  \let\label\orglabel
-  \orgdescriptionlabel{#1}%
-}
-\makeatother
+%\usepackage{metadata}
+%\usepackage{licencia}
+%\usepackage{code}
+%\usepackage{portada}
+%\usepackage{entornos}
+%\usepackage{indices}
+%\usepackage{admonition}
+%
+%
+%\setlist[description]{style=nextline,labelwidth=0pt,leftmargin=30pt,itemindent=\dimexpr-20pt-\labelsep\relax} % Global Setup Description List
+%
+%\DeclareRobustCommand{\deschyperlink}[2]{%
+%  \hyperlink{#1}{#2}%
+%}
+%
+%
+%\makeatletter % Redefinition of Description List Items source: http://tex.stackexchange.com/a/1248/13552
+%\let\orgdescriptionlabel\descriptionlabel
+%\renewcommand*{\descriptionlabel}[1]{%
+%  \let\orglabel\label
+%  \let\label\@gobble
+%  \phantomsection
+%  \protected@edef\@currentlabel{#1}%
+%  %\edef\@currentlabelname{#1}%
+%  \let\label\orglabel
+%  \orgdescriptionlabel{#1}%
+%}
+%\makeatother
