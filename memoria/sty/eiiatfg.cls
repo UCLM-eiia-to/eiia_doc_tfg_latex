@@ -6,8 +6,6 @@
 \ProcessOptions\relax
 \LoadClass{book}
 
-\makeatletter
-
 \setlength{\unitlength}{1mm}
 
 % https://tug.org/pipermail/pstricks/2011/009122.html
@@ -31,6 +29,7 @@
 \usepackage{bookmark}
 \usepackage{float}
 \usepackage{datetime2}
+\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{subfigure}
@@ -52,7 +51,6 @@
 \usepackage{xstring}
 \usepackage{pdfpages}
 \usepackage{amsmath}
-\usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage{ifthen}
 \usepackage{currfile}
@@ -78,6 +76,7 @@
 \graphicspath{{fig/}}
 
 \pagestyle{headings}
+
 \renewcommand{\bibname}{Referencias}
 \renewcommand{\appendixname}{Anexo}
 \renewcommand{\appendixtocname}{Anexo}
@@ -106,7 +105,7 @@
 \usepackage{entornos}
 \usepackage{indices}
 \usepackage{admonition}
-\usepackage{acronimos}
+
 
 \setlist[description]{style=nextline,labelwidth=0pt,leftmargin=30pt,itemindent=\dimexpr-20pt-\labelsep\relax} % Global Setup Description List
 
@@ -114,16 +113,3 @@
   \hyperlink{#1}{#2}%
 }
 
-
-\makeatletter % Redefinition of Description List Items source: http://tex.stackexchange.com/a/1248/13552
-\let\orgdescriptionlabel\descriptionlabel
-\renewcommand*{\descriptionlabel}[1]{%
-  \let\orglabel\label
-  \let\label\@gobble
-  \phantomsection
-  \protected@edef\@currentlabel{#1}%
-  %\edef\@currentlabelname{#1}%
-  \let\label\orglabel
-  \orgdescriptionlabel{#1}%
-}
-\makeatother
