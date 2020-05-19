@@ -1,5 +1,8 @@
 \documentclass{sty/eiiatfg}
 
+\usepackage[nomain,acronym]{glossaries}
+\makeglossaries
+
 % Hay muchos paquetes para LaTeX que facilitan centenares de trabajos
 % engorrosos. Busca en Internet si no sabes hacer algo con LaTeX. El
 % repositorio oficial está en https://ctan.org/
@@ -27,7 +30,8 @@
 
 % Si usas muchos símbolos conviene que describas lo que significan en un archivo
 % aparte (en este caso simbolos.tex).  Si no es el caso puedes comentar esta línea
-\listofsymbols{simbolos.tex}
+%\listofsymbols{simbolos.tex}
+
 
 \portada
 
@@ -67,7 +71,7 @@
 % un anexo sería una backward reference, que deben evitarse a toda costa
 \cleardoublepage
 \hypertarget{ch:bibliografia}{%
-    \printbibliography[heading=bibintoc,title={Bibliografía}]}
+    \printbibliography[heading=bibintoc]}
 \cleardoublepage
 
 \end{document}
