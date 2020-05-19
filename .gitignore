@@ -18,3 +18,5 @@ memoria/fig/ejemplo-eps-converted-to.pdf
 *.out
 memoria/TFG.run.xml
 memoria/TFG.pdf
+*.bbl
+*.blg
