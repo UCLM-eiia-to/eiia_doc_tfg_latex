@@ -14,23 +14,21 @@
 % Codificación UTF8
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish, es-tabla]{babel}
+\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage[
     backend=biber, 
     %style=ieee,
     %style=alphabetic,
     style=ieee-alphabetic,
     sorting=nty]{biblatex}
-\usepackage{makecell}
+\usepackage[hyperfootnotes=false]{hyperref}
 \usepackage{times}
-\usepackage[dvipsnames]{xcolor}
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{bookmark}
-\usepackage{float}
 \usepackage{datetime2}
-\usepackage{hyperref}
-\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{multirow}
 \usepackage[%
     font={small,sf},

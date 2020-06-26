@@ -75,7 +75,7 @@ En la fig.~\ref{fig:figura-angulo-30} se muestra un ejemplo de figura girada 30.
 
 \warning{Hay muchos paquetes para definir subfiguras (\texttt{subfigure}, \texttt{subfig}, \texttt{subfloat}, \texttt{floatrow}, \texttt{subcaption}, \ldots \textbf{¡Todos son incompatibles entre sí!}  En esta plantilla hemos usado el paquete más moderno, \texttt{subcaption}. No mezcles con otros paquetes de subfiguras.}
 
-Una característica interesante del entorno \texttt{figure} es que permite definir sub-figuras con la orden \texttt{subcaptionbox}.  La colocación de las sub-figuras es prácticamente automática.  Un ejemplo puede verse en la figura~\ref{fig:matriz-figuras}. Las subfiguras pueden referenciarse etiquetando la \emph{subcaption}, como cualquier otro elemento del texto.  Por ejemplo, la figura~\ref{fig:matriz-a} es igual que la figura~\ref{fig:matriz-b}.
+Una característica interesante del entorno \texttt{figure} es que permite definir sub-figuras con la orden \texttt{subcaptionbox}.  La colocación de las sub-figuras es prácticamente automática.  Un ejemplo puede verse en la figura~\ref{fig:matriz-figuras}. Las subfiguras pueden referenciarse etiquetando la \emph{subcaption} (primer argumento de \texttt{subcaptionbox}), como cualquier otro elemento del texto.  Por ejemplo, la figura~\ref{fig:matriz-a} es igual que la figura~\ref{fig:matriz-b}.
 
 \begin{figure}[htbp]
 \centering
@@ -86,5 +86,4 @@ Una característica interesante del entorno \texttt{figure} es que permite defin
 \label{fig:matriz-figuras}
 \end{figure}
 
-En general, he tratado de mantener un compromiso entre el número de características incluidas y la facilidad de uso de la plantilla.  Las figuras muy complejas es algo que prefiero evitar, así que en el estilo de la plantilla no incorporo \texttt{cleveref}.
 
