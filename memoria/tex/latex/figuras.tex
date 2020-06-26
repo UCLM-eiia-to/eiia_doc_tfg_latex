@@ -73,17 +73,18 @@ En la fig.~\ref{fig:figura-angulo-30} se muestra un ejemplo de figura girada 30.
 \label{fig:figura-angulo-30}
 \end{figure}
 
-Una característica interesante del entorno \texttt{figure} es que permite definir sub-figuras con la orden \texttt{subfigure} o el entorno del mismo nombre.  La colocación de las sub-figuras es prácticamente automática.  Un ejemplo puede verse en la figura~\ref{fig:matriz-figuras}.
+\warning{Hay muchos paquetes para definir subfiguras (\texttt{subfigure}, \texttt{subfig}, \texttt{subfloat}, \texttt{floatrow}, \texttt{subcaption}, \ldots \textbf{¡Todos son incompatibles entre sí!}  En esta plantilla hemos usado el paquete más moderno, \texttt{subcaption}. No mezcles con otros paquetes de subfiguras.}
+
+Una característica interesante del entorno \texttt{figure} es que permite definir sub-figuras con la orden \texttt{subcaptionbox}.  La colocación de las sub-figuras es prácticamente automática.  Un ejemplo puede verse en la figura~\ref{fig:matriz-figuras}. Las subfiguras pueden referenciarse etiquetando la \emph{subcaption}, como cualquier otro elemento del texto.  Por ejemplo, la figura~\ref{fig:matriz-a} es igual que la figura~\ref{fig:matriz-b}.
 
 \begin{figure}[htbp]
 \centering
-\subfigure[figurita1]{\includegraphics[width=40mm]{ejemplo.eps}}
-\subfigure[figurita2]{\includegraphics[width=40mm]{ejemplo.eps}}
-\subfigure[figurita3]{\includegraphics[width=80mm]{ejemplo.eps}}
+\subcaptionbox{Figurita 1\label{fig:matriz-a}}{\includegraphics[width=40mm]{ejemplo.eps}}
+\subcaptionbox{Figurita 2\label{fig:matriz-b}}{\includegraphics[width=40mm]{ejemplo.eps}}
+\subcaptionbox{Figurita 3\label{fig:matriz-c}}{\includegraphics[width=80mm]{ejemplo.eps}}
 \caption{Matriz de figuras} 
 \label{fig:matriz-figuras}
 \end{figure}
 
-Una subfigura puede referenciarse a partir de la referencia a la figura.  Por ejemplo, la figura~\ref{fig:matriz-figuras}(a) es igual que la figura~\ref{fig:matriz-figuras}(b). Sin embargo, cuando las figuras son muy complejas, es posible que se prefieran esquemas más automáticos.  En \href{https://tex.stackexchange.com/questions/181225/how-to-reference-to-subfigure-in-latex}{StackExchange} encontrarás soluciones a éste y otros problemas con mucha facilidad.
+En general, he tratado de mantener un compromiso entre el número de características incluidas y la facilidad de uso de la plantilla.  Las figuras muy complejas es algo que prefiero evitar, así que en el estilo de la plantilla no incorporo \texttt{cleveref}.
 
-En general, he tratado de mantener un compromiso entre el número de características incluidas y la facilidad de uso de la plantilla.  Las figuras muy complejas es algo que prefiero evitar, así que en el estilo de la plantilla no incorpora el paquete \texttt{subcaption}.

@@ -32,7 +32,15 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{multirow}
-\usepackage{subfigure}
+\usepackage[%
+    font={small,sf},
+    labelfont=bf,
+    format=hang,    
+    format=plain,
+    margin=0pt,
+    width=0.8\textwidth,
+]{caption}
+\usepackage[list=true]{subcaption}
 \usepackage{appendix}
 \usepackage{listings}
 \usepackage{longtable}
@@ -43,7 +51,6 @@
 \usepackage{emptypage}
 \usepackage{setspace}
 \usepackage{textcomp}
-\usepackage{caption}
 \usepackage{footmisc}
 \usepackage{csquotes}
 \usepackage{rotating}
@@ -113,3 +120,18 @@
   \hyperlink{#1}{#2}%
 }
 
+
+\if0 % Conflicto con acrónimos
+\makeatletter % Redefinition of Description List Items source: http://tex.stackexchange.com/a/1248/13552
+\let\orgdescriptionlabel\descriptionlabel
+\renewcommand*{\descriptionlabel}[1]{%
+  \let\orglabel\label
+  \let\label\@gobble
+  \phantomsection
+  \protected@edef\@currentlabel{#1}%
+  %\edef\@currentlabelname{#1}%
+  \let\label\orglabel
+  \orgdescriptionlabel{#1}%
+}
+\makeatother
+\fi
