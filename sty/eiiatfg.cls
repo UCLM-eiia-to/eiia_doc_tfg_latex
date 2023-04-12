@@ -19,7 +19,7 @@
     %style=alphabetic,
     style=ieee-alphabetic,
     sorting=nty]{biblatex}
-\usepackage[hyperfootnotes=false]{hyperref}
+\usepackage[hyperfootnotes=false,spanish]{hyperref}
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{bookmark}
