@@ -49,17 +49,17 @@
     \noindent
     \begin{tabbing}
         \hspace*{1.7cm} \= \\
-        \emph{Título:}  \> \parbox[t]{.7\textwidth}{\@title} \\
-        \emph{Autor:}   \> \@author \\
-        \emph{Grado:}   \> \gname{\@grado} \\
-        \emph{Tutor\multi@tutor{}:}   \> \parbox[t]{.7\textwidth}{\@advisor\\} \\
-        \ifdefempty{\@email}   {}{\emph{E-mail:}   \> \@email \\}
-        \ifdefempty{\@phone}   {}{\emph{Teléfono:} \> \@phone \\}
-        \ifdefempty{\@homepage}{}{\emph{Sitio web:} \> \url{\@homepage} \\}
+        \emph{Título:}  \> \parbox[t]{.7\textwidth}{\@title} \\[1ex]
+        \emph{Autor:}   \> \@author \\[1ex]
+        \emph{Grado:}   \> \gname{\@grado} \\[1ex]
+        \emph{Tutor\multi@tutor{}:}   \> \parbox[t]{.7\textwidth}{\@advisor}\\[1ex]
+        \ifdefempty{\@email}   {}{\emph{E-mail:}   \> \@email \\[1ex]}
+        \ifdefempty{\@phone}   {}{\emph{Teléfono:} \> \@phone \\[1ex]}
+        \ifdefempty{\@homepage}{}{\emph{Sitio web:} \> \url{\@homepage} \\[1ex]}
         \ifdefempty{\@address} {}{\emph{Dirección:} \> \parbox[t]{.7\textwidth}{%
             \@address \\ 
             \ifdefempty{\@zipcode} {}{\@zipcode~}\@city\ -- \@country  
-        } \\}
+        } \\[1ex]}
     \end{tabbing}
     \vspace{-.7cm}
   \begin{singlespace}
