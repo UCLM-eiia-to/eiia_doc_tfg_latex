@@ -12,8 +12,13 @@
 \usepackage{etex}
 
 % Codificación UTF8
-\usepackage[T1]{fontenc}
+%\usepackage[T1]{fontenc}
 %\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Noto Mono}
+
 \usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage[
     backend=biber, 
@@ -22,7 +27,6 @@
     style=ieee-alphabetic,
     sorting=nty]{biblatex}
 \usepackage[hyperfootnotes=false]{hyperref}
-\usepackage{times}
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{bookmark}
