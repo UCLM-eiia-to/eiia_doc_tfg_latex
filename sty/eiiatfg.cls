@@ -8,18 +8,11 @@
 
 \setlength{\unitlength}{1mm}
 
-% https://tug.org/pipermail/pstricks/2011/009122.html
-\usepackage{etex}
-
-% Codificación UTF8
-%\usepackage[T1]{fontenc}
-%\usepackage[utf8]{inputenc}
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
-\setsansfont{Arial}
-\setmonofont{Noto Mono}
+\usepackage[babelshorthands=true]{polyglossia}
+\setdefaultlanguage{spanish}
+\setotherlanguages{english,french,german}
 
-\usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage[
     backend=biber, 
     %style=ieee,
@@ -30,7 +23,6 @@
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{bookmark}
-\usepackage{datetime2}
 \usepackage{makecell}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{multirow}
@@ -86,11 +78,6 @@
 
 \pagestyle{headings}
 
-\renewcommand{\bibname}{Referencias}
-\renewcommand{\appendixname}{Anexo}
-\renewcommand{\appendixtocname}{Anexo}
-\renewcommand{\appendixpagename}{Anexo}
-
 \definecolor{gris30}{gray}{0.30}
 \definecolor{gris85}{gray}{0.85}
 \definecolor{gris20}{gray}{0.20}
@@ -115,6 +102,15 @@
 \usepackage{indices}
 \usepackage{admonition}
 
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Noto Sans Mono}
+
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
+\addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}
+\addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
+\crefname{table}{tabla}{tablas}
+\Crefname{table}{Tabla}{Tablas}
 
 \setlist[description]{style=nextline,labelwidth=0pt,leftmargin=30pt,itemindent=\dimexpr-20pt-\labelsep\relax} % Global Setup Description List
 
