@@ -13,7 +13,7 @@
 
 % Codificación UTF8
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage[spanish,es-tabla,es-noshorthands]{babel}
 \usepackage[
     backend=biber, 

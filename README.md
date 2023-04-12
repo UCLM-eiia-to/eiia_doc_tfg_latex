@@ -37,3 +37,8 @@ en fig/_FUENTES.txt de dónde la has sacado.
 Asegúrate de que tienes permiso para usar las figuras en tu TFG. Si es necesario, 
 pide permiso por correo electrónico al autor original. Las únicas excepciones a 
 esta regla son los documentos técnicos de los fabricantes sin alterar.
+
+Configuración de Overleaf/LaTeX
+-------------------------------
+
+Utilizamos `lualatex` para compilarlo. Compila con la versión de 2021 y 2022 de TeX Live.
