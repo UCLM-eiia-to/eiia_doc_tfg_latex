@@ -102,7 +102,7 @@
 \usepackage{indices}
 \usepackage{admonition}
 
-\setmainfont{Times New Roman}
+\setmainfont{STIX Two Text}
 \setsansfont{Arial}
 \setmonofont{Noto Sans Mono}
 
