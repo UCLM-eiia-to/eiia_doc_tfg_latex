@@ -9,17 +9,17 @@
 \setlength{\unitlength}{1mm}
 
 \usepackage{fontspec}
-\usepackage[babelshorthands=true]{polyglossia}
+\usepackage[babelshorthands=true] {polyglossia}
+\usepackage[hyperfootnotes=false]{hyperref}
 \setdefaultlanguage{spanish}
 \setotherlanguages{english,french,german}
 
 \usepackage[
     backend=biber, 
-    %style=ieee,
     %style=alphabetic,
+    %style=ieee,
     style=ieee-alphabetic,
     sorting=nty]{biblatex}
-\usepackage[hyperfootnotes=false,spanish]{hyperref}
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{bookmark}
