@@ -9,10 +9,46 @@
 \setlength{\unitlength}{1mm}
 
 \usepackage{fontspec}
-\usepackage[babelshorthands=true] {polyglossia}
 \usepackage[hyperfootnotes=false]{hyperref}
+\usepackage[babelshorthands=true] {polyglossia}
 \setdefaultlanguage{spanish}
 \setotherlanguages{english,french,german}
+
+\appto{\blockextras@spanish}{%
+    \def\figureautorefname{Figura}%
+    \def\tableautorefname{Tabla}%
+    \def\partautorefname{Parte}%
+    \def\appendixautorefname{Anexo}%
+    \def\chapterautorefname{Capítulo}%
+    \def\sectionautorefname{Sección}%
+}
+
+\appto{\blockextras@english}{%
+    \def\figureautorefname{Figure}%
+    \def\tableautorefname{Table}%
+    \def\partautorefname{Part}%
+    \def\appendixautorefname{Appendix}%
+    \def\chapterautorefname{Chapter}%
+    \def\sectionautorefname{Section}%
+}
+
+\appto{\blockextras@french}{%
+    \def\figureautorefname{Figure}%
+    \def\tableautorefname{Tableau}%
+    \def\partautorefname{Partie}%
+    \def\appendixautorefname{Annexe}%
+    \def\chapterautorefname{Chapitre}%
+    \def\sectionautorefname{Section}%
+}
+
+\appto{\blockextras@german}{%
+    \def\figureautorefname{Abbildung}%
+    \def\tableautorefname{Tabelle}%
+    \def\partautorefname{Teil}%
+    \def\appendixautorefname{Anhang}%
+    \def\chapterautorefname{Kapitel}%
+    \def\sectionautorefname{Abschnitt}%
+}
 
 \usepackage[
     backend=biber, 
@@ -106,30 +142,9 @@
 \setsansfont{Arial}
 \setmonofont{Noto Sans Mono}
 
-\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
-\addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}
-\addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
-\crefname{table}{tabla}{tablas}
-\Crefname{table}{Tabla}{Tablas}
-
 \setlist[description]{style=nextline,labelwidth=0pt,leftmargin=30pt,itemindent=\dimexpr-20pt-\labelsep\relax} % Global Setup Description List
 
 \DeclareRobustCommand{\deschyperlink}[2]{%
   \hyperlink{#1}{#2}%
 }
 
-
-\if0 % Conflicto con acrónimos
-\makeatletter % Redefinition of Description List Items source: http://tex.stackexchange.com/a/1248/13552
-\let\orgdescriptionlabel\descriptionlabel
-\renewcommand*{\descriptionlabel}[1]{%
-  \let\orglabel\label
-  \let\label\@gobble
-  \phantomsection
-  \protected@edef\@currentlabel{#1}%
-  %\edef\@currentlabelname{#1}%
-  \let\label\orglabel
-  \orgdescriptionlabel{#1}%
-}
-\makeatother
-\fi
