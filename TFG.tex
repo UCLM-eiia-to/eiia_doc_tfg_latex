@@ -13,7 +13,7 @@
 % del TFG (consulta sty/eiiatfg.cls para más detalles).
 
 \input{datos-tfg.tex}
-\input{acronimos.tex}
+\input{tex/acronimos.tex}
 
 % La bibliografía la puedes descomponer en varios archivos .bib
 % Los archivos .bib se pueden escribir a mano con ayuda de un editor online
@@ -32,15 +32,15 @@
 
 % Si usas muchos símbolos conviene que describas lo que significan en un archivo
 % aparte (en este caso simbolos.tex).  Si no es el caso puedes comentar esta línea
-\listofsymbols{simbolos.tex}
+\listofsymbols{tex/simbolos.tex}
 
 
 \portada
 
 % Edita los
-\input{agradecimientos.tex}	   
-\input{dedicatoria.tex}
-\input{resumen.tex}
+\input{tex/agradecimientos.tex}	   
+\input{tex/dedicatoria.tex}
+\input{tex/resumen.tex}
 
 \indices
 
@@ -59,18 +59,18 @@
 % Si ves que tu proyecto se explica mejor en otro orden o con otra organización 
 % hazlo sin preguntar.  No hay un modelo impuesto por la normativa
 
-\input{introduccion.tex}
-\input{objetivos.tex}
-\input{antecedentes.tex}
-\input{desarrollo.tex}
-\input{resultados.tex}
-\input{conclusiones.tex}
+\input{tex/introduccion.tex}
+\input{tex/objetivos.tex}
+\input{tex/antecedentes.tex}
+\input{tex/desarrollo.tex}
+\input{tex/resultados.tex}
+\input{tex/conclusiones.tex}
 
 % Los anexos pueden ir en la misma carpeta que el cuerpo del documento 
 % porque eso facilita la migración de partes de un capítulo a un anexo.
 \appendix\cleardoublepage
 \hypertarget{ch:anexos}{%
-    \input{latex.tex}}
+    \input{tex/latex.tex}}
 
 % La bibliografía no suele ir numerada porque se pone después de los anexos.
 % No se debe poner antes de los anexos porque si se cita una referencia en
