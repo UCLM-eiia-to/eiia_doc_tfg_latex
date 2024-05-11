@@ -130,13 +130,13 @@
   colorlinks = true,
 }
 
-\usepackage{metadata}
-\usepackage{licencia}
-\usepackage{code}
-\usepackage{portada}
-\usepackage{entornos}
-\usepackage{indices}
-\usepackage{admonition}
+\usepackage{sty/metadata}
+\usepackage{sty/licencia}
+\usepackage{sty/code}
+\usepackage{sty/portada}
+\usepackage{sty/entornos}
+\usepackage{sty/indices}
+\usepackage{sty/admonition}
 
 \setmainfont{STIX Two Text}
 \setsansfont{Arial}
