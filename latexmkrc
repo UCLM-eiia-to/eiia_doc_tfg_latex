@@ -13,9 +13,13 @@ sub run_makeglossaries {
         system "makeglossaries", "-q", "$base_name"; #windows
     }
     else {
-        system "makeglossaries '$base_name'"; #unix
-        # system "makeglossaries", "$base_name"; #windows
+        #system "makeglossaries '$base_name'"; #unix
+        system "makeglossaries", "$base_name"; #windows
     };
 
     popd; # ... and cd-ing back again
 }
+
+push @generated_exts, 'glo', 'gls', 'glg';
+push @generated_exts, 'acn', 'acr', 'alg';
+$clean_ext .= ' %R.ist %R.xdy %R.bbl';
