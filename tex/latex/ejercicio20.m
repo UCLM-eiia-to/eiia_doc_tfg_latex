@@ -1,5 +1,7 @@
 function [T]=Ejercicio20(f,c)
 
+% aquí hay un comentario con eñes
+
 T = char('B'*ones(8,8));
 
 for i=1:8

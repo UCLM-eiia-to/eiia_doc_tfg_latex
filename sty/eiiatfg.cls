@@ -423,8 +423,9 @@
 
 % ___________________ FONTS _______________________________
 \setmainfont{STIX Two Text}
+%\setmathfont{STIX Two Math}
 \setsansfont{Arial}
-\setmonofont{Noto Sans Mono}
+\setmonofont{Liberation Mono}
 
 \setlist[description]{style=nextline,labelwidth=0pt,leftmargin=30pt,itemindent=\dimexpr-20pt-\labelsep\relax} % Global Setup Description List
 
