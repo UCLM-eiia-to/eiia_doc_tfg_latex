@@ -317,10 +317,7 @@
                 }}
             \end{picture} \\[13cm]
             \mbox{}\hfill\scalebox{.8}[1.0]{\Large\MakeUppercase{%
-                \ifcase\month\or
-    enero\or febrero\or marzo\or abril\or mayo\or junio\or
-    julio\or agosto\or septiembre\or octubre\or noviembre\or
-    diciembre\fi\space de~\number\year}}\\
+                junio\space de~\number\year}}\\
         \end{minipage}
         \thispagestyle{empty}
     \end{titlepage}

@@ -1,2 +1,21 @@
 
 memoria/tex/latex/_LEEME~
+*.pygtex
+*.pygstyle
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.ist
+*.lof
+*.log
+*.lot
+TFG.pdf
+TFG.run.xml
+TFG.synctex.gz
+*.toc
