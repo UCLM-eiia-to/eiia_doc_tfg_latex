@@ -295,8 +295,15 @@
         top=15mm, bottom=15mm}
     \begin{titlepage}
         \sffamily
-        \noindent\includegraphics[height=2cm,valign=B]{sty/LOGOMARCA_UCLM_2021}%
-        \hfill\includegraphics[height=2.6cm,valign=B]{sty/EIIA_sym.pdf} \\
+        \noindent\includegraphics[height=1.9cm,valign=T]{sty/LOGOMARCA_UCLM_2021}%
+        %\hfill\begin{picture}(50,0) %codigo original
+        %\hfill\begin{picture}(65,0) %codigo logo horizontal
+        \hfill\begin{picture}(45,0) %codigo logo horizontal
+                \put(0,0){%
+                    %\includegraphics[height=5cm,valign=T]{sty/Logo_EIIA_2024.pdf} %codigo original
+                    %\includegraphics[height=1.9cm,valign=T]{sty/Logo_EIIA_2024_hztal.pdf}%codigo logo horizontal
+                    \includegraphics[height=2.1cm,valign=T]{sty/Logo_EIIA_2024_sintexto.pdf}%codigo logo horizontal
+                }\end{picture} \\
         \begin{minipage}[b]{1.5cm}
             \colorbox{lightgray}{\rotatebox[origin=l]{90}{%
                 \rule{0cm}{1.6cm}\rule{3.5cm}{0cm}
@@ -305,9 +312,6 @@
                 \rule{.5cm}{0cm}}}}}
         \end{minipage}\hfill
         \begin{minipage}[b]{14cm}
-            \hfill\parbox{4.5cm}{%
-            \resizebox{4.5cm}{.35cm}{\Large TRABAJO FIN DE GRADO}\\[1.1ex]
-            \resizebox{4.5cm}{!}{N\textordmasculine~\expandafter\@gobbletwo\number\numexpr\the\year\relax-\tfgcode{\@grado}-\@expediente}}\\[6cm]
             \setlength{\unitlength}{1cm}
             \begin{picture}(13,0)
                 \put(0,0){\parbox{14cm}{%
@@ -316,11 +320,16 @@
                     \@author
                 }}
             \end{picture} \\[13cm]
-            \mbox{}\hfill\scalebox{.8}[1.0]{\Large\MakeUppercase{%
+            \mbox{}\hfill\parbox{4.5cm}{%
+            \resizebox{4.5cm}{.35cm}{\Large TRABAJO FIN DE GRADO}\\[1.1ex]
+            \resizebox{4.5cm}{!}{N\textordmasculine~\expandafter\@gobbletwo\number\numexpr\the\year\relax-\tfgcode{\@grado}-\@expediente}\\[3ex]
+            \resizebox{4.5cm}{!}{\Large\MakeUppercase{%
                 \ifcase\month\or
     enero\or febrero\or marzo\or abril\or mayo\or junio\or
     julio\or agosto\or septiembre\or octubre\or noviembre\or
-    diciembre\fi\space de~\number\year}}\\
+    diciembre\fi\space de~\number\year}}
+    }
+            \hfill\\
         \end{minipage}
         \thispagestyle{empty}
     \end{titlepage}
