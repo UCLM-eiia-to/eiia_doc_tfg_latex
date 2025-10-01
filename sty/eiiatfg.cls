@@ -10,7 +10,7 @@
 
 \usepackage{fontspec}
 \usepackage[hyperfootnotes=false]{hyperref}
-\usepackage[babelshorthands=true] {polyglossia}
+\usepackage[babelshorthands=true]{polyglossia}
 \setdefaultlanguage{spanish}
 \setotherlanguages{english,french,german}
 
@@ -91,6 +91,8 @@
 \usepackage{cleveref}
 \usepackage{ifthen}
 \usepackage{currfile}
+\usepackage{xurl}
+\usepackage{unicode-math}
 
 \usepackage[
   paperwidth=210mm,
@@ -181,6 +183,15 @@
     \ifthenelse{\equal{#1}{IEIA}}{Electrónica Industrial y Automática}{}%
     \ifthenelse{\equal{#1}{IA}}{Aeroespacial}{}%
 }
+
+%codigo para nueva portada marzo 2025
+\newcommand{\gnameuppercase}[1]{%
+    GRADO EN INGENIERÍA
+    \ifthenelse{\equal{#1}{IE}}{ELÉCTRICA}{}%
+    \ifthenelse{\equal{#1}{IEIA}}{ELECTRÓNICA INDUSTRIAL Y AUTOMÁTICA}{}%
+    \ifthenelse{\equal{#1}{IA}}{\,AEROESPACIAL}{}%
+}
+% fin codigo para nueva portada marzo 2025
 
 % _____________________ LICENCIA __________________________________
 \makeatletter
@@ -285,6 +296,13 @@
   sensitive=true
 }
 
+%CODIGO PORTADA PROPUESTA
+%definimos color corporativo UCLM
+\definecolor{rojoUCLM}{RGB}{179, 0, 51}
+\usepackage{afterpage}
+\newfontfamily\arialfont{Arial}
+% FIN CODIGO PORTADA PROPUESTA
+
 %_________________________ PORTADA _____________________________________________
 \makeatletter
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
@@ -293,34 +311,92 @@
     \newgeometry{%
         left=20mm,right=15mm,
         top=15mm, bottom=15mm}
-    \begin{titlepage}
-        \sffamily
-        \noindent\includegraphics[height=2cm,valign=B]{sty/LOGOMARCA_UCLM_2021}%
-        \hfill\includegraphics[height=2.6cm,valign=B]{sty/EIIA_sym.pdf} \\
+
+% INICIO CODIGO PORTADA NUEVA 1
+\begin{titlepage}
+      \sffamily
+      \noindent\hfill\includegraphics[height=2.6cm,valign=B]{sty/Logo_EIIA_2024_hztal.pdf} \\
         \begin{minipage}[b]{1.5cm}
-            \colorbox{lightgray}{\rotatebox[origin=l]{90}{%
-                \rule{0cm}{1.6cm}\rule{3.5cm}{0cm}
-                \raisebox{.45cm}{\Huge{\textsf{\textcolor{white}{%
-                    Escuela de Ingeniería Industrial y Aeroespacial}}
-                \rule{.5cm}{0cm}}}}}
+            \colorbox{rojoUCLM}{\rotatebox[origin=l]{90}{%
+               % \rule{0cm}{1.6cm}\rule{3.5cm}{0cm}
+               \rule{0cm}{1.6cm}\rule{3.5cm}{0cm}
+                \noindent\includegraphics[height=2.6cm,valign=C]%
+                {sty/LOGOMARCA_UCLM_2021_sinbordes_invertido.pdf}%
+                \raisebox{0.255cm}{%
+                \Huge{\arialfont{\textcolor{white}{%
+                \hspace{0.5cm}\hfill Universidad de Castilla-La Mancha}}%
+                }                
+                \rule{.5cm}{0cm}%
+                }%
+                }%
+                }%
         \end{minipage}\hfill
         \begin{minipage}[b]{14cm}
             \hfill\parbox{4.5cm}{%
             \resizebox{4.5cm}{.35cm}{\Large TRABAJO FIN DE GRADO}\\[1.1ex]
-            \resizebox{4.5cm}{!}{N\textordmasculine~\expandafter\@gobbletwo\number\numexpr\the\year\relax-\tfgcode{\@grado}-\@expediente}}\\[6cm]
+            \resizebox{4.5cm}{!}{N\textordmasculine~\expandafter\@gobbletwo\number\numexpr\the\year\relax-\tfgcode{\@grado}-\@expediente}}\\[6cm]%
             \setlength{\unitlength}{1cm}
             \begin{picture}(13,0)
                 \put(0,0){\parbox{14cm}{%
-                    \raggedleft\LARGE\textbf{\@title}\\
-                    \rule{0cm}{1cm}\\
+                   \raggedleft\Large{\gnameuppercase{\@grado}} \\
+                   \rule{0cm}{2cm}\\
+                    \raggedleft\LARGE\textbf{\@title} \\
+                    \rule{0cm}{2cm}\\
                     \@author
                 }}
             \end{picture} \\[13cm]
             \mbox{}\hfill\scalebox{.8}[1.0]{\Large\MakeUppercase{%
-                junio\space de~\number\year}}\\
+                \ifcase\month\or
+    enero\or febrero\or marzo\or abril\or mayo\or junio\or
+    julio\or agosto\or septiembre\or octubre\or noviembre\or
+    diciembre\fi\space de~\number\year}}\\
         \end{minipage}
         \thispagestyle{empty}
     \end{titlepage}
+% FINAL CODIGO PORTADA NUEVA 1
+
+% INICIO CODIGO PORTADA INTERIOR NUEVA 1
+
+    \begin{titlepage}
+        \sffamily
+        \noindent\hfill\includegraphics[height=2.6cm,valign=B]{sty/Logo_EIIA_2024_hztal.pdf} \\
+        \begin{minipage}[b]{1.5cm}
+            \colorbox{white}{\rotatebox[origin=l]{90}{%
+                \rule{0cm}{1.6cm}\rule{3.5cm}{0cm}
+                \noindent\includegraphics[height=2.5cm,valign=C]%
+                {sty/LOGOMARCA_UCLM_2021_sinbordes.pdf}%
+                \raisebox{0.255cm}{% 
+                \Huge{\arialfont{\textcolor{rojoUCLM}{%
+                \hspace{0.5cm}\hfill Universidad de Castilla-La Mancha}}%
+                }                
+                \rule{.5cm}{0cm}%
+                }%
+                }%
+                }%
+        \end{minipage}\hfill
+        \begin{minipage}[b]{14cm}
+            \hfill\parbox{4.5cm}{%
+            \resizebox{4.5cm}{.35cm}{\Large TRABAJO FIN DE GRADO}\\[1.1ex]
+            \resizebox{4.5cm}{!}{N\textordmasculine~\expandafter\@gobbletwo\number\numexpr\the\year\relax-\tfgcode{\@grado}-\@expediente}}\\[6cm]%
+            \setlength{\unitlength}{1cm}
+            \begin{picture}(13,0)
+                \put(0,0){\parbox{14cm}{%
+                   \raggedleft\Large{\gnameuppercase{\@grado}} \\
+                   \rule{0cm}{2cm}\\
+                    \raggedleft\LARGE\textbf{\@title} \\
+                    \rule{0cm}{2cm}\\
+                    \@author
+                }}
+            \end{picture} \\[13cm]
+            \mbox{}\hfill\scalebox{.8}[1.0]{\Large\MakeUppercase{%
+                \ifcase\month\or
+    enero\or febrero\or marzo\or abril\or mayo\or junio\or
+    julio\or agosto\or septiembre\or octubre\or noviembre\or
+    diciembre\fi\space de~\number\year}}\\
+        \end{minipage}
+        \thispagestyle{empty}
+    \end{titlepage}
+% FINAL CODIGO PORTADA INTERIOR NUEVA 1
     \clearpage\restoregeometry
     \thispagestyle{empty}
     \copyrightpage
@@ -329,7 +405,7 @@
 
 \newcommand{\multi@tutor}{}
 \newcommand{\copyrightpage}{%
-    \IfSubStringInString{\\}{\@advisor}{\renewcommand{\multi@tutor}{es}}{}
+    \IfSubStr{\\}{\@advisor}{\renewcommand{\multi@tutor}{es}}{}
     \null \vfill
     \noindent
     \begin{tabbing}
@@ -339,7 +415,7 @@
         \emph{Grado:}   \> \gname{\@grado} \\[1ex]
         \emph{Tutor\multi@tutor{}:}   \> \parbox[t]{.7\textwidth}{\@advisor}\\[1ex]
         \ifdefempty{\@email}   {}{\emph{E-mail:}   \> \@email \\[1ex]}
-        \ifdefempty{\@phone}   {}{\emph{Teléfono:} \> \@phone \\[1ex]}
+    %    \ifdefempty{\@phone}   {}{\emph{Teléfono:} \> \@phone \\[1ex]}
         \ifdefempty{\@homepage}{}{\emph{Sitio web:} \> \url{\@homepage} \\[1ex]}
         \ifdefempty{\@address} {}{\emph{Dirección:} \> \parbox[t]{.7\textwidth}{%
             \@address \\ 
@@ -419,14 +495,15 @@
 
 
 % ___________________ FONTS _______________________________
+\usepackage{unicode-math}
+
 \setmainfont{STIX Two Text}
-%\setmathfont{STIX Two Math}
 \setsansfont{Arial}
-\setmonofont{Liberation Mono}
+\setmonofont{JetBrains Mono}[Scale=MatchLowercase]
+\setmathfont{STIX Two Math}
 
 \setlist[description]{style=nextline,labelwidth=0pt,leftmargin=30pt,itemindent=\dimexpr-20pt-\labelsep\relax} % Global Setup Description List
 
 \DeclareRobustCommand{\deschyperlink}[2]{%
   \hyperlink{#1}{#2}%
 }
-
