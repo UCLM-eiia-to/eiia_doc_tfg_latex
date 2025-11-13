@@ -298,7 +298,7 @@
 
 %CODIGO PORTADA PROPUESTA
 %definimos color corporativo UCLM
-\definecolor{rojoUCLM}{RGB}{183, 18, 52}
+\definecolor{rojoUCLM}{RGB}{179, 0, 51}
 \usepackage{afterpage}
 \newfontfamily\arialfont{Arial}
 % FIN CODIGO PORTADA PROPUESTA
@@ -315,19 +315,24 @@
 % INICIO CODIGO PORTADA NUEVA 1
 \begin{titlepage}
       \sffamily
-        \noindent\begin{minipage}[b]{1.5cm}
-            \noindent\colorbox{rojoUCLM}{\rotatebox[origin=l]{90}{%
-                \noindent\includegraphics[height=2.8cm,valign=C]{sty/Logo_UCLM_2025_invertido.pdf}%
-                \rule{1.5cm}{0cm}%
-                \includegraphics[height=2.8cm,valign=C]{sty/Logo_UCLM_2025_invertido.pdf}%
-                \rule{1.5cm}{0cm}%
-                \includegraphics[height=2.8cm,valign=C]{sty/Logo_UCLM_2025_invertido.pdf}%
-                \rule{1.5cm}{0cm}%
-        }}%
+      \noindent\hfill\includegraphics[height=2.6cm,valign=B]{sty/Logo_EIIA_2024_hztal.pdf} \\
+        \begin{minipage}[b]{1.5cm}
+            \colorbox{rojoUCLM}{\rotatebox[origin=l]{90}{%
+               % \rule{0cm}{1.6cm}\rule{3.5cm}{0cm}
+               \rule{0cm}{1.6cm}\rule{3.5cm}{0cm}
+                \noindent\includegraphics[height=2.6cm,valign=C]%
+                {sty/LOGOMARCA_UCLM_2021_sinbordes_invertido.pdf}%
+                \raisebox{0.255cm}{%
+                \Huge{\arialfont{\textcolor{white}{%
+                \hspace{0.5cm}\hfill Universidad de Castilla-La Mancha}}%
+                }                
+                \rule{.5cm}{0cm}%
+                }%
+                }%
+                }%
         \end{minipage}\hfill
         \begin{minipage}[b]{14cm}
-            \hfill\includegraphics[height=2.6cm,valign=B]{sty/Logo_EIIA_2024_hztal.pdf}\\[2cm]
-            \par\noindent\hfill\parbox{4.5cm}{%
+            \hfill\parbox{4.5cm}{%
             \resizebox{4.5cm}{.35cm}{\Large TRABAJO FIN DE GRADO}\\[1.1ex]
             \resizebox{4.5cm}{!}{N\textordmasculine~\expandafter\@gobbletwo\number\numexpr\the\year\relax-\tfgcode{\@grado}-\@expediente}}\\[6cm]%
             \setlength{\unitlength}{1cm}
@@ -353,21 +358,24 @@
 % INICIO CODIGO PORTADA INTERIOR NUEVA 1
 
     \begin{titlepage}
-      \sffamily
-        \noindent\begin{minipage}[b]{1.5cm}
-            \setlength{\fboxrule}{0.2pt}
-            \noindent\fcolorbox{lightgray}{white}{\rotatebox[origin=l]{90}{%
-                \noindent\includegraphics[height=2.8cm,valign=C]{sty/Logo_UCLM_2025.pdf}%
-                \rule{1.5cm}{0cm}%
-                \includegraphics[height=2.8cm,valign=C]{sty/Logo_UCLM_2025.pdf}%
-                \rule{1.5cm}{0cm}%
-                \includegraphics[height=2.8cm,valign=C]{sty/Logo_UCLM_2025.pdf}%
-                \rule{1.5cm}{0cm}%
-            }}%
+        \sffamily
+        \noindent\hfill\includegraphics[height=2.6cm,valign=B]{sty/Logo_EIIA_2024_hztal.pdf} \\
+        \begin{minipage}[b]{1.5cm}
+            \colorbox{white}{\rotatebox[origin=l]{90}{%
+                \rule{0cm}{1.6cm}\rule{3.5cm}{0cm}
+                \noindent\includegraphics[height=2.5cm,valign=C]%
+                {sty/LOGOMARCA_UCLM_2021_sinbordes.pdf}%
+                \raisebox{0.255cm}{% 
+                \Huge{\arialfont{\textcolor{rojoUCLM}{%
+                \hspace{0.5cm}\hfill Universidad de Castilla-La Mancha}}%
+                }                
+                \rule{.5cm}{0cm}%
+                }%
+                }%
+                }%
         \end{minipage}\hfill
         \begin{minipage}[b]{14cm}
-            \hfill\includegraphics[height=2.6cm,valign=B]{sty/Logo_EIIA_2024_hztal.pdf}\\[2cm]
-            \par\noindent\hfill\parbox{4.5cm}{%
+            \hfill\parbox{4.5cm}{%
             \resizebox{4.5cm}{.35cm}{\Large TRABAJO FIN DE GRADO}\\[1.1ex]
             \resizebox{4.5cm}{!}{N\textordmasculine~\expandafter\@gobbletwo\number\numexpr\the\year\relax-\tfgcode{\@grado}-\@expediente}}\\[6cm]%
             \setlength{\unitlength}{1cm}
